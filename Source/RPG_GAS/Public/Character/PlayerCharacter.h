@@ -9,5 +9,7 @@ UCLASS()
 class RPG_GAS_API APlayerCharacter : public ABaseCharacter
 {
 	GENERATED_BODY()
-	
+
+public:
+	APlayerCharacter();
 };
