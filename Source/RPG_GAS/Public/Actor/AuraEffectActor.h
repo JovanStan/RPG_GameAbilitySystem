@@ -1,0 +1,30 @@
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "Components/SphereComponent.h"
+#include "GameFramework/Actor.h"
+#include "AuraEffectActor.generated.h"
+
+UCLASS()
+class RPG_GAS_API AAuraEffectActor : public AActor
+{
+	GENERATED_BODY()
+	
+public:	
+	AAuraEffectActor();
+	
+	UFUNCTION()
+	virtual void OnOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyState, bool bFromSweep, const FHitResult& SweepResult);
+	UFUNCTION()
+	virtual void OnEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyState);
+
+protected:
+	virtual void BeginPlay() override;
+
+private:
+	UPROPERTY(VisibleAnywhere)
+	TObjectPtr<UStaticMeshComponent> mesh;
+	UPROPERTY(VisibleAnywhere)
+	TObjectPtr<USphereComponent> sphere;
+};

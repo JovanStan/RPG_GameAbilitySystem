@@ -6,7 +6,7 @@
 #include "PlayerCharacter.generated.h"
 
 UCLASS()
-class RPG_GAS_API APlayerCharacter : public ABaseCharacter
+class RPG_GAS_API APlayerCharacter : public ABaseCharacter 
 {
 	GENERATED_BODY()
 
