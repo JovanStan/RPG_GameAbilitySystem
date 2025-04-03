@@ -11,6 +11,16 @@ ABaseCharacter::ABaseCharacter()
 	Weapon->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 }
 
+UAbilitySystemComponent* ABaseCharacter::GetAbilitySystemComponent() const
+{
+	return AbilitySystemComponent;
+}
+
+UAttributeSet* ABaseCharacter::GetAttributeSet() const
+{
+	return AttributeSet;
+}
+
 void ABaseCharacter::BeginPlay()
 {
 	Super::BeginPlay();
