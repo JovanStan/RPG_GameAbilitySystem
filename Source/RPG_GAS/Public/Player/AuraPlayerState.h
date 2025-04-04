@@ -20,8 +20,8 @@ public:
 	UAttributeSet* GetAttributeSet() const;
 
 protected:
-	UPROPERTY()
+	UPROPERTY(EditAnywhere)
 	TObjectPtr<UAbilitySystemComponent> AbilitySystemComponent;
-	UPROPERTY()
+	UPROPERTY(EditAnywhere)
 	TObjectPtr<UAttributeSet> AttributeSet;
 };
